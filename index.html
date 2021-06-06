@@ -33,6 +33,42 @@
 
   <!-- Main Script -->
   <script src="./scripts/script.js" type="module"></script>
+
+
+  <!-- Some polyfills to ensure we have promises. -->
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <!-- Split SDK loaded via CDN. -->
+  <script src="https://cdn.split.io/sdk/split-10.15.7.js"></script>
+  <!-- Our custom script. -->
+  <script type="text/javascript">
+    (function() {
+      let factory = splitio({
+      core: {
+        authorizationKey: 'h9qoj915kd6bo92nqqne667a58mno4njr427',
+        key: Math.random().toString(36).slice(2)
+      }
+    });
+    let client = factory.client();
+
+    client.on(client.Event.SDK_READY, function() {
+      let treatment = client.getTreatment('double_column');
+
+      if (treatment === 'on') {
+        // Insert code for on treatment
+        document.querySelectorAll("main")[0].className = "double-column";
+      } else if (treatment === 'off') {
+        // Insert code for off treatment
+        document.querySelectorAll("main")[0].className = "";
+      } else {
+        // Insert code for control treatment
+      }
+
+      client.destroy().then(function() {
+        // Your data is successfully flushed.
+      });
+    });
+    })();
+  </script>
 </body>
 
 </html>
