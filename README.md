@@ -12,3 +12,4 @@ https://thomas-gg.github.io/Lab10/index.html
 
 https://thomas-gg.github.io/Lab10/secondSplit.html
 
+For the secondSplit I made the "Dark Mode feature" and it still is random whether there is a single or double column.
