@@ -15,5 +15,4 @@ https://thomas-gg.github.io/Lab10/secondSplit.html
 For the secondSplit I made the "Dark Mode feature" and it still is random whether there is a single or double column.
 
 ![analytics](screenshots/Analytics.PNG)
-![tagManager](screenshots/tagManager.PNG)
-![tagManager2](screenshots/tagManager2.PNG)
+![analytics2](screenshots/Analytics2.PNG)
